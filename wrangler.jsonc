@@ -1,0 +1,14 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "remotearth-company-site",
+  "compatibility_date": "2026-07-26",
+  "assets": {
+    "directory": "./dist",
+    // Serves index.html for unknown paths so client-side routes
+    // (/privacy, /terms) work on a hard refresh or direct link.
+    "not_found_handling": "single-page-application"
+  },
+  "observability": {
+    "enabled": true
+  }
+}

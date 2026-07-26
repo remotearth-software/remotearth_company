@@ -87,14 +87,27 @@ these files from it and everything else follows.
 
 ## Deploying
 
-The build output in `dist/` is a static SPA, so any static host works. Client-side
-routes (`/privacy`, `/terms`) need all paths rewritten to `index.html`:
+The build output in `dist/` is a static SPA, so any static host works. Build
+command `npm run build`, output directory `dist`. Client-side routes
+(`/privacy`, `/terms`) need unknown paths served `index.html`, and each host
+spells that differently:
 
+- **Cloudflare (current host)** — `wrangler.jsonc` (included) does it with
+  `assets.not_found_handling: "single-page-application"`. Deploy command is
+  `npx wrangler deploy`.
 - **Vercel** — `vercel.json` (included) handles it.
-- **Netlify / Cloudflare Pages** — `public/_redirects` (included) handles it.
+- **Netlify** — add a `public/_redirects` file containing `/*  /index.html  200`.
 - **Nginx** — `try_files $uri $uri/ /index.html;`
 
-Build command `npm run build`, output directory `dist`.
+> **Do not add `_redirects` back while deploying to Cloudflare.** Its Workers
+> Assets deploy rejects the `/*  /index.html  200` catch-all with
+> "Infinite loop detected in this rule" and fails the build. SPA routing there
+> comes from `wrangler.jsonc` instead.
+
+Because `wrangler.jsonc` is committed, Wrangler skips its interactive project
+setup during the Cloudflare build — otherwise it generates its own config on
+every deploy. Verify config changes locally with `npx wrangler deploy --dry-run`
+(no account credentials required).
 
 ## Notes
 
