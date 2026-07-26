@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-label="Expense Tracker app preview placeholder">
+  <defs>
+    <linearGradient id="ex-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1024"/>
+      <stop offset="55%" stop-color="#141033"/>
+      <stop offset="100%" stop-color="#1b1038"/>
+    </linearGradient>
+    <linearGradient id="ex-accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+    <linearGradient id="ex-phone" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#16182e"/>
+      <stop offset="100%" stop-color="#0d0f22"/>
+    </linearGradient>
+    <radialGradient id="ex-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="ex-shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#000" flood-opacity="0.55"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#ex-bg)"/>
+  <g opacity="0.6">
+    <circle cx="620" cy="120" r="230" fill="url(#ex-glow)"/>
+    <circle cx="120" cy="500" r="190" fill="url(#ex-glow)" opacity="0.55"/>
+  </g>
+
+  <!-- background bar chart -->
+  <g transform="translate(56 350)" opacity="0.5">
+    <rect y="90" width="34" height="60" rx="10" fill="#ffffff" opacity="0.1"/>
+    <rect x="48" y="52" width="34" height="98" rx="10" fill="#ffffff" opacity="0.12"/>
+    <rect x="96" y="72" width="34" height="78" rx="10" fill="url(#ex-accent)" opacity="0.7"/>
+    <rect x="144" y="24" width="34" height="126" rx="10" fill="#ffffff" opacity="0.12"/>
+    <rect x="192" y="66" width="34" height="84" rx="10" fill="#ffffff" opacity="0.1"/>
+    <rect x="240" y="6" width="34" height="144" rx="10" fill="url(#ex-accent)" opacity="0.45"/>
+  </g>
+
+  <!-- left copy blocks -->
+  <g transform="translate(66 118)">
+    <rect width="58" height="58" rx="18" fill="url(#ex-accent)" opacity="0.95"/>
+    <path d="M18 40h22M18 30h16M18 20h22" stroke="#0b1024" stroke-width="4" stroke-linecap="round"/>
+    <rect y="86" width="264" height="16" rx="8" fill="#ffffff" opacity="0.85"/>
+    <rect y="118" width="196" height="12" rx="6" fill="#ffffff" opacity="0.35"/>
+    <rect y="144" width="150" height="12" rx="6" fill="#ffffff" opacity="0.2"/>
+  </g>
+
+  <!-- phone -->
+  <g transform="translate(452 62)" filter="url(#ex-shadow)">
+    <rect width="272" height="480" rx="42" fill="url(#ex-phone)" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+    <rect x="100" y="18" width="72" height="10" rx="5" fill="#ffffff" opacity="0.18"/>
+
+    <text x="28" y="70" font-family="Inter, system-ui, sans-serif" font-size="13" fill="#9aa3b5">This month</text>
+    <text x="28" y="104" font-family="Sora, Inter, system-ui, sans-serif" font-size="34" font-weight="700" fill="#ffffff">$1,284</text>
+    <text x="28" y="126" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#6ee7b7">12% under budget</text>
+
+    <!-- donut -->
+    <g transform="translate(136 224)">
+      <circle r="66" fill="none" stroke="#ffffff" stroke-opacity="0.08" stroke-width="20"/>
+      <circle r="66" fill="none" stroke="url(#ex-accent)" stroke-width="20" stroke-linecap="round"
+              stroke-dasharray="180 235" transform="rotate(-90)"/>
+      <circle r="66" fill="none" stroke="#22d3ee" stroke-opacity="0.75" stroke-width="20" stroke-linecap="round"
+              stroke-dasharray="92 323" stroke-dashoffset="-190" transform="rotate(-90)"/>
+      <circle r="66" fill="none" stroke="#f472b6" stroke-opacity="0.7" stroke-width="20" stroke-linecap="round"
+              stroke-dasharray="60 355" stroke-dashoffset="-292" transform="rotate(-90)"/>
+    </g>
+
+    <!-- category rows -->
+    <g transform="translate(24 318)">
+      <rect width="224" height="46" rx="14" fill="#ffffff" opacity="0.05"/>
+      <circle cx="28" cy="23" r="10" fill="#c084fc"/>
+      <rect x="50" y="12" width="72" height="9" rx="4.5" fill="#ffffff" opacity="0.5"/>
+      <rect x="50" y="27" width="46" height="8" rx="4" fill="#ffffff" opacity="0.25"/>
+      <rect x="168" y="17" width="40" height="12" rx="6" fill="#ffffff" opacity="0.35"/>
+
+      <g transform="translate(0 58)">
+        <rect width="224" height="46" rx="14" fill="#ffffff" opacity="0.05"/>
+        <circle cx="28" cy="23" r="10" fill="#22d3ee"/>
+        <rect x="50" y="12" width="58" height="9" rx="4.5" fill="#ffffff" opacity="0.5"/>
+        <rect x="50" y="27" width="62" height="8" rx="4" fill="#ffffff" opacity="0.25"/>
+        <rect x="168" y="17" width="40" height="12" rx="6" fill="#ffffff" opacity="0.35"/>
+      </g>
+    </g>
+  </g>
+
+  <text x="66" y="556" font-family="Inter, system-ui, sans-serif" font-size="12" letter-spacing="2" fill="#ffffff" opacity="0.28">PLACEHOLDER ARTWORK</text>
+</svg>
