@@ -7,6 +7,37 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta name="theme-color" content="#00040e" />
 
+    <!--
+      Resolve the theme before first paint, so a light-mode visitor (or the
+      DriveSmooth app opening a page with ?theme=light) never sees a dark flash
+      while the bundle loads. Mirrors the precedence in src/lib/theme.ts —
+      keep the two in step.
+    -->
+    <script>
+      ;(function () {
+        try {
+          var param = new URLSearchParams(location.search).get('theme')
+          var saved = localStorage.getItem('remotearth-theme')
+          var theme =
+            param === 'light' || param === 'dark'
+              ? param
+              : saved === 'light' || saved === 'dark'
+                ? saved
+                : matchMedia('(prefers-color-scheme: dark)').matches
+                  ? 'dark'
+                  : 'light'
+          document.documentElement.dataset.theme = theme
+          if (theme === 'light') {
+            document
+              .querySelector('meta[name="theme-color"]')
+              .setAttribute('content', '#ffffff')
+          }
+        } catch (error) {
+          document.documentElement.dataset.theme = 'dark'
+        }
+      })()
+    </script>
+
     <title>Remotearth Software — apps people actually keep</title>
     <meta
       name="description"

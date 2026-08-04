@@ -8,6 +8,7 @@ import { navLinks, site } from '@/data/site'
 const legalLinks = [
   { label: 'Privacy Policy', to: '/privacy' },
   { label: 'Terms of Service', to: '/terms' },
+  { label: 'DriveSmooth Privacy', to: '/drivesmooth/privacy' },
 ]
 
 export function Footer() {

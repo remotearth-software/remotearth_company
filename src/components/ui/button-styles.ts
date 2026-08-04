@@ -8,7 +8,9 @@ const base =
 
 const variants: Record<Variant, string> = {
   primary:
-    'bg-gradient-to-r from-brand-400 to-accent-400 text-ink-950 shadow-[0_10px_30px_-12px] shadow-brand-400/70 hover:shadow-[0_16px_40px_-12px] hover:shadow-brand-400/80 hover:brightness-110 active:brightness-95',
+    // text-on-brand, not text-ink-950: ink-950 is the page background token
+    // and flips to white in light mode, which would wash out on the gradient.
+    'bg-gradient-to-r from-brand-400 to-accent-400 text-on-brand shadow-[0_10px_30px_-12px] shadow-brand-400/70 hover:shadow-[0_16px_40px_-12px] hover:shadow-brand-400/80 hover:brightness-110 active:brightness-95',
   secondary:
     'border border-white/15 bg-white/5 text-white backdrop-blur hover:border-white/30 hover:bg-white/10',
   ghost: 'text-ink-200 hover:bg-white/5 hover:text-white',

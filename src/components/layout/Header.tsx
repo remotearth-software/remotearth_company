@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom'
 import { Menu, X, Mail } from 'lucide-react'
 import { Container } from '@/components/ui/Container'
 import { Logo } from '@/components/ui/Logo'
+import { ThemeToggle } from '@/components/ui/ThemeToggle'
 import { buttonStyles } from '@/components/ui/button-styles'
 import { useActiveSection } from '@/hooks/useActiveSection'
 import { navLinks, site } from '@/data/site'
@@ -75,6 +76,8 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-2">
+          <ThemeToggle />
+
           {/* Wrapper handles the responsive display: `hidden` would lose to the
               button's own `inline-flex` in Tailwind's cascade order. */}
           <span className="hidden sm:block">

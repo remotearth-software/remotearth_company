@@ -35,6 +35,10 @@
   --color-ink-900: #080f22;
   --color-ink-950: #00040e;
 
+  /* Text that sits on the bright brand gradient. Stays dark in BOTH themes —
+     unlike --color-ink-950, which becomes the page background and so flips. */
+  --color-on-brand: #00040e;
+
   --font-sans:
     'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto,
     'Helvetica Neue', Arial, sans-serif;
@@ -78,6 +82,47 @@
       opacity: 1;
     }
   }
+}
+
+/* ------------------------------------------------------------------
+   Light theme
+   ------------------------------------------------------------------
+   Tailwind v4 compiles utilities as var() lookups — `.text-white` is
+   `color: var(--color-white)`, `.bg-ink-950` is `background-color:
+   var(--color-ink-950)`. So re-pointing the tokens flips the whole site
+   without touching a single class name: "white" becomes the foreground
+   ink and the ink ramp is mirrored.
+
+   Specificity note: this must beat Tailwind's `:root` (0,1,0). The
+   `html` + attribute selector is (0,1,1), so it wins regardless of
+   source order.
+   ------------------------------------------------------------------ */
+html[data-theme='light'] {
+  /* Foreground ink. Also drives every white/N alpha utility, so
+     `bg-white/5` and `border-white/10` become subtle dark tints. */
+  --color-white: #0b1220;
+
+  /* Mirrored ramp: 950 is the page background, 300 is body copy. */
+  --color-ink-950: #ffffff;
+  --color-ink-900: #f5f7fb;
+  --color-ink-800: #e7ebf3;
+  --color-ink-700: #c8d0e0;
+  --color-ink-600: #a7b2c8;
+  --color-ink-500: #7c88a6;
+  --color-ink-400: #56618a;
+  --color-ink-300: #47536e;
+  --color-ink-200: #2f3859;
+  --color-ink-100: #1e2643;
+  --color-ink-50: #080f22;
+
+  /* The pale brand tints are legible on navy but not on white. These
+     three carry links (`[&_a]:text-brand-300` in LegalPage) and the
+     `text-gradient` headline. */
+  --color-brand-200: #0040ab;
+  --color-brand-300: #0051d6;
+  --color-accent-300: #009fd6;
+
+  --shadow-card: 0 18px 40px -24px rgb(15 23 42 / 0.18);
 }
 
 /* ------------------------------------------------------------------
@@ -147,11 +192,20 @@
   @apply border border-white/10 bg-white/[0.03] backdrop-blur-xl;
 }
 
-/* Faint dotted grid used behind hero / CTA sections */
+/* Faint dotted grid used behind hero / CTA sections. Drawn from
+   --color-white so it inverts with the theme like the glass surfaces do. */
 @utility grid-backdrop {
   background-image:
-    linear-gradient(to right, rgb(255 255 255 / 0.04) 1px, transparent 1px),
-    linear-gradient(to bottom, rgb(255 255 255 / 0.04) 1px, transparent 1px);
+    linear-gradient(
+        to right,
+        color-mix(in oklab, var(--color-white) 4%, transparent) 1px,
+        transparent 1px
+      ),
+    linear-gradient(
+      to bottom,
+      color-mix(in oklab, var(--color-white) 4%, transparent) 1px,
+      transparent 1px
+    );
   background-size: 64px 64px;
 }
 
