@@ -9,6 +9,7 @@ const legalLinks = [
   { label: 'Privacy Policy', to: '/privacy' },
   { label: 'Terms of Service', to: '/terms' },
   { label: 'DriveSmooth Privacy', to: '/drivesmooth/privacy' },
+  { label: 'DriveSmooth Terms', to: '/drivesmooth/terms' },
 ]
 
 export function Footer() {

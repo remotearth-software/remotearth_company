@@ -4,6 +4,7 @@ import { Layout } from '@/components/layout/Layout'
 import { HomePage } from '@/pages/HomePage'
 import { PrivacyPage } from '@/pages/PrivacyPage'
 import { DriveSmoothPrivacyPage } from '@/pages/DriveSmoothPrivacyPage'
+import { DriveSmoothTermsPage } from '@/pages/DriveSmoothTermsPage'
 import { TermsPage } from '@/pages/TermsPage'
 import { NotFoundPage } from '@/pages/NotFoundPage'
 
@@ -18,6 +19,10 @@ function App() {
             <Route
               path="drivesmooth/privacy"
               element={<DriveSmoothPrivacyPage />}
+            />
+            <Route
+              path="drivesmooth/terms"
+              element={<DriveSmoothTermsPage />}
             />
             <Route path="terms" element={<TermsPage />} />
             <Route path="*" element={<NotFoundPage />} />

@@ -129,11 +129,17 @@ export function DriveSmoothPrivacyPage() {
       <h2>8. Data Retention and Deletion</h2>
       <p>
         Your data is kept for as long as your account exists. You can delete
-        individual trips and posts inside the app at any time. To delete your
-        account and all associated data — trips, posts, comments, stats, and
-        profile — email us at <strong>{site.email}</strong> from the email
-        associated with your account, and we will complete the deletion within 30
-        days.
+        individual trips and posts inside the app at any time.
+      </p>
+      <p>
+        You can delete your entire account from inside the app, under Profile →
+        Settings. Deletion is scheduled 7 days ahead — you can cancel it from the
+        same screen at any point before then, and you can keep using DriveSmooth
+        in the meantime. Once it goes through, your account and everything
+        attached to it — trips, posts, comments, stats, badges and profile — are
+        permanently removed. If you cannot reach the app, email us at{' '}
+        <strong>{site.email}</strong> from the address on your account and we
+        will action the request.
       </p>
 
       <h2>9. Children's Privacy</h2>
