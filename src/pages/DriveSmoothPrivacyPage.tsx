@@ -131,8 +131,7 @@ export function DriveSmoothPrivacyPage() {
         Your data is kept for as long as your account exists. You can delete
         individual trips and posts inside the app at any time. To delete your
         account and all associated data — trips, posts, comments, stats, and
-        profile — email us at{' '}
-        <a href={`mailto:${site.email}`}>{site.email}</a> from the email
+        profile — email us at <strong>{site.email}</strong> from the email
         associated with your account, and we will complete the deletion within 30
         days.
       </p>
@@ -153,7 +152,10 @@ export function DriveSmoothPrivacyPage() {
       <p>
         <strong>{site.name}</strong>
         <br />
-        <a href={`mailto:${site.email}`}>{site.email}</a>
+        {/* Plain text, not a mailto: link — this page is opened inside the app's
+            WebView, which cannot hand mailto: off to a mail client and shows
+            "webpage not available" instead. The address stays selectable. */}
+        <strong>{site.email}</strong>
       </p>
     </LegalPage>
   )
