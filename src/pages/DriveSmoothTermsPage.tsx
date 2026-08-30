@@ -16,7 +16,7 @@ export function DriveSmoothTermsPage() {
   return (
     <LegalPage
       title="DriveSmooth Terms & Conditions"
-      lastUpdated="August 4, 2026"
+      lastUpdated="August 30, 2026"
       intro={`These terms are an agreement between you and ${site.name} covering your use of the DriveSmooth mobile app. By creating an account or using the app, you agree to them. If you do not agree, please do not use DriveSmooth.`}
     >
       <h2>1. Safety Comes First</h2>
@@ -114,6 +114,14 @@ export function DriveSmoothTermsPage() {
         Our handling of your personal information — including location, motion
         and trip data — is described in the DriveSmooth Privacy Policy, which
         forms part of these terms. Please read it.
+      </p>
+      <p>
+        Note that <strong>trip history is kept for 30 days</strong>. Individual
+        trips are permanently deleted once they are older than that, so the app
+        is not a long-term record of your driving and should not be relied on as
+        one. Your lifetime totals, badges, streaks and leaderboard standing are
+        accumulated as you drive and are not affected. Share or screenshot any
+        individual trip you want to keep a copy of.
       </p>
 
       <h2>8. Availability and Changes</h2>

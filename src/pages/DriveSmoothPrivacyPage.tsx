@@ -16,7 +16,7 @@ export function DriveSmoothPrivacyPage() {
   return (
     <LegalPage
       title="DriveSmooth Privacy Policy"
-      lastUpdated="August 4, 2026"
+      lastUpdated="August 30, 2026"
       intro="DriveSmooth is a driving companion app that scores your trips using your phone's motion sensors and GPS, and helps you build smoother, safer driving habits. Because the app works with location and account data, we want to be clear about exactly what is collected, why, and what control you have over it."
     >
       <h2>1. Information We Collect</h2>
@@ -48,17 +48,43 @@ export function DriveSmoothPrivacyPage() {
           <strong>Device push token</strong> — so we can deliver notifications
           such as badge awards and challenge updates
         </li>
+        <li>
+          <strong>Device and app information</strong> — the app version you are
+          running and the country your mobile network reports, sent with each
+          request so we can support the right versions and run
+          country-specific challenges
+        </li>
+        <li>
+          <strong>Usage and diagnostics</strong> — app-activity data collected
+          automatically by Google Analytics for Firebase: app opens, sessions,
+          screens viewed and purchases, along with your device model, operating
+          system, approximate region and advertising ID. We use it to
+          understand how the app is used and to find problems.
+        </li>
       </ul>
 
       <h2>2. Location Data</h2>
       <p>
         DriveSmooth records your precise location while a trip is being recorded
-        — that is what draws your route and detects driving events. Background
-        location is used <strong>only</strong> if you enable automatic trip
-        detection, an optional setting that lets the app notice when you start
-        driving and record the trip for you. You can turn it off at any time in
-        your profile, and the app never accesses your location outside of trip
-        recording.
+        — that is what draws your route and detects driving events.
+      </p>
+      <p>
+        Background location is used <strong>only</strong> if you enable
+        automatic trip detection, an optional setting that lets the app notice
+        when you start driving and record the trip for you. With it switched
+        on, the app also keeps a low-power <em>passive</em> location watch: it
+        never powers up the GPS itself, and only sees location fixes that some
+        other app on your phone has already requested. Those fixes are checked
+        on your device for one thing — whether you appear to be moving at
+        driving speed — and are never uploaded or stored on our servers. Only
+        once a trip actually starts is any location recorded. Automatic
+        detection also re-arms itself after your phone restarts, so it keeps
+        working without you reopening the app.
+      </p>
+      <p>
+        You can turn automatic trip detection off at any time in your profile.
+        With it off, the app accesses your location only while a trip is being
+        recorded.
       </p>
 
       <h2>3. Motion and Activity Data</h2>
@@ -105,17 +131,28 @@ export function DriveSmoothPrivacyPage() {
           sign-in and push notifications
         </li>
         <li>
+          <strong>Google Analytics for Firebase</strong> — app usage and
+          diagnostics, as described in section 1
+        </li>
+        <li>
           <strong>Google Play Billing</strong> — premium subscriptions
         </li>
         <li>
           <strong>Google AdMob</strong> — ads on free accounts
         </li>
         <li>
-          <strong>Mapbox</strong> — rendering the maps your routes are drawn on
+          <strong>Mapbox</strong> — rendering the maps your routes are drawn on,
+          and matching a recorded route to the roads it followed so we can
+          compare your speed against posted limits. Route coordinates are sent
+          to Mapbox for that match.
         </li>
         <li>
           <strong>Facebook Login</strong> (Meta) — only if you choose to sign in
           with Facebook
+        </li>
+        <li>
+          <strong>Zoho Mail</strong> — delivering account emails such as
+          sign-up verification
         </li>
       </ul>
 
@@ -128,8 +165,26 @@ export function DriveSmoothPrivacyPage() {
 
       <h2>8. Data Retention and Deletion</h2>
       <p>
-        Your data is kept for as long as your account exists. You can delete
-        individual trips and posts inside the app at any time.
+        Your account, profile, stats, badges and posts are kept for as long as
+        your account exists. Two things are removed automatically on a rolling
+        basis:
+      </p>
+      <ul>
+        <li>
+          <strong>Trips are kept for 30 days.</strong> Recorded trips — their
+          routes, events and telemetry — are permanently deleted once they are
+          older than that, which is why your history and stats screens cover the
+          last 30 days. Your lifetime totals, badges, streaks and leaderboard
+          standing are calculated as you drive and are <em>not</em> affected.
+        </li>
+        <li>
+          <strong>Notifications are kept for 30 days</strong> before being
+          cleared from your inbox.
+        </li>
+      </ul>
+      <p>
+        You can also delete individual trips and posts inside the app at any
+        time.
       </p>
       <p>
         You can delete your entire account from inside the app, under Profile →
