@@ -21,7 +21,7 @@ export function DriveSmoothPrivacyPage() {
   return (
     <LegalPage
       title="DriveSmooth Privacy Policy"
-      lastUpdated="September 9, 2026"
+      lastUpdated="September 12, 2026"
       intro="DriveSmooth is a driving companion app that scores your trips using your phone's motion sensors and GPS, and helps you build smoother, safer driving habits. This policy covers the DriveSmooth apps for Android and iOS and the accounts behind them. Because the app works with location and account data, we want to be clear about exactly what is collected, why, and what control you have over it."
     >
       <h2>1. Information We Collect</h2>
@@ -36,6 +36,19 @@ export function DriveSmoothPrivacyPage() {
           use a sign-in provider: Google or Facebook on Android, Google or Apple
           on iOS. If you use Sign in with Apple and choose to hide your email,
           we only ever receive Apple's private relay address.
+        </li>
+        <li>
+          <strong>Eligibility confirmation</strong> — the date on which you ticked
+          the box during profile setup confirming you are at least 16 and hold a
+          valid driver's licence. We record that you confirmed it; we do not
+          collect, see or verify any licence details.
+        </li>
+        <li>
+          <strong>Vehicle information (optional)</strong> — the brand, model,
+          year and fuel type of your vehicle, if you choose to add them when
+          editing your profile. They are shown on your own profile and are not
+          required; you can change or clear them at any time from the same
+          screen.
         </li>
         <li>
           <strong>Trip data</strong> — GPS route, distance, duration, driving
@@ -67,12 +80,17 @@ export function DriveSmoothPrivacyPage() {
           region setting on iOS.
         </li>
         <li>
-          <strong>Usage and diagnostics (Android only)</strong> — app-activity
-          data collected automatically by Google Analytics for Firebase: app
-          opens, sessions, screens viewed and purchases, along with your device
-          model, operating system, approximate region and advertising ID. We use
-          it to understand how the app is used and to find problems. The iOS app
-          does not include an analytics SDK and sends none of this.
+          <strong>Usage and diagnostics</strong> — app-activity data collected
+          automatically by Google Analytics for Firebase on both Android and
+          iOS: app opens, sessions, screens viewed and purchases, along with
+          your device model, operating system and approximate region. We use it
+          to understand how the app is used and to find problems. Once you are
+          signed in we label this data with your account identifier, so it is
+          linked to your account rather than anonymous. On Android it also
+          includes your advertising ID; on iOS the advertising identifier is
+          included only if you allow it at the App Tracking Transparency prompt
+          described in section 5. Analytics is collected from released versions
+          of the apps only.
         </li>
       </ul>
       <p>
@@ -185,7 +203,7 @@ export function DriveSmoothPrivacyPage() {
         </li>
         <li>
           <strong>Google Analytics for Firebase</strong> — app usage and
-          diagnostics on Android only, as described in section 1
+          diagnostics on both Android and iOS, as described in section 1
         </li>
         <li>
           <strong>Google Play Billing</strong> (Android) and the{' '}
@@ -236,11 +254,14 @@ export function DriveSmoothPrivacyPage() {
       </p>
       <ul>
         <li>
-          <strong>Trips are kept for 30 days.</strong> Recorded trips — their
+          <strong>Trips are kept for one year.</strong> Recorded trips — their
           routes, events and telemetry — are permanently deleted once they are
-          older than that, which is why your history and stats screens cover the
-          last 30 days. Your lifetime totals, badges, streaks and leaderboard
-          standing are calculated as you drive and are <em>not</em> affected.
+          older than that, which is why your Trips screen covers the last year.
+          (The window we actually apply is 370 days, so a full twelve months
+          stays available to you for a few days beyond the anniversary.) Your
+          Home screen shows a shorter 30-day summary by design, and your
+          lifetime totals, badges, streaks and leaderboard standing are
+          calculated as you drive and are <em>not</em> affected.
         </li>
         <li>
           <strong>Notifications are kept for 30 days</strong> before being

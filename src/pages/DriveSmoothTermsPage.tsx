@@ -20,7 +20,7 @@ export function DriveSmoothTermsPage() {
   return (
     <LegalPage
       title="DriveSmooth Terms & Conditions"
-      lastUpdated="September 9, 2026"
+      lastUpdated="September 12, 2026"
       intro={`These terms are an agreement between you and ${site.name} covering your use of the DriveSmooth mobile app on Android and iOS. By creating an account or using the app, you agree to them. If you do not agree, please do not use DriveSmooth.`}
     >
       <h2>1. Safety Comes First</h2>
@@ -168,12 +168,15 @@ export function DriveSmoothTermsPage() {
         forms part of these terms. Please read it.
       </p>
       <p>
-        Note that <strong>trip history is kept for 30 days</strong>. Individual
-        trips are permanently deleted once they are older than that, so the app
-        is not a long-term record of your driving and should not be relied on as
-        one. Your lifetime totals, badges, streaks and leaderboard standing are
-        accumulated as you drive and are not affected. Share or screenshot any
-        individual trip you want to keep a copy of.
+        Note that <strong>trip history is kept for one year</strong> — a 370-day
+        window, so a full twelve months stays available for a few days beyond the
+        anniversary. Individual trips are permanently deleted once they are older
+        than that, so the app is not a permanent record of your driving and should
+        not be relied on as one. The app does not export your trips or mileage, and
+        does not produce tax, expense or reimbursement reports; if you need a
+        lasting copy of a trip, share or screenshot it. Your lifetime totals,
+        badges, streaks and leaderboard standing are accumulated as you drive and
+        are not affected.
       </p>
 
       <h2>9. Availability and Changes</h2>
