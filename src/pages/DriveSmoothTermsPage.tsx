@@ -20,7 +20,7 @@ export function DriveSmoothTermsPage() {
   return (
     <LegalPage
       title="DriveSmooth Terms & Conditions"
-      lastUpdated="September 12, 2026"
+      lastUpdated="September 14, 2026"
       intro={`These terms are an agreement between you and ${site.name} covering your use of the DriveSmooth mobile app on Android and iOS. By creating an account or using the app, you agree to them. If you do not agree, please do not use DriveSmooth.`}
     >
       <h2>1. Safety Comes First</h2>
@@ -172,11 +172,29 @@ export function DriveSmoothTermsPage() {
         window, so a full twelve months stays available for a few days beyond the
         anniversary. Individual trips are permanently deleted once they are older
         than that, so the app is not a permanent record of your driving and should
-        not be relied on as one. The app does not export your trips or mileage, and
-        does not produce tax, expense or reimbursement reports; if you need a
-        lasting copy of a trip, share or screenshot it. Your lifetime totals,
-        badges, streaks and leaderboard standing are accumulated as you drive and
-        are not affected.
+        not be relied on as one. Your lifetime totals, badges, streaks and
+        leaderboard standing are accumulated as you drive and are not affected.
+      </p>
+      <p>
+        <strong>Mileage log and reports.</strong> You can tag trips as business
+        or personal, add an origin, destination and purpose to each, and export a
+        mileage report for a period you choose as a PDF or CSV file. A report can
+        only include trips that are still stored, so if you need a record that
+        outlasts the one-year window — a full tax year, for example — export it
+        before the oldest trips are deleted and keep your own copy. Free accounts
+        may be asked to watch a short ad before an export; accounts on a trial, a
+        premium subscription or complimentary access export without one.
+      </p>
+      <p>
+        Section 3 applies to reports too: distances come from your phone's GPS
+        and can be off, so a report is only as accurate as the trips in it. Any
+        reimbursement figure is simply the per-kilometre rate you enter
+        multiplied by the total distance of those trips; a rate suggested in the
+        app is a convenience and may be out of date. A report is a record-keeping
+        aid, not tax, accounting or legal advice, and we do not promise it will
+        satisfy a tax authority, your employer or anyone else. You are
+        responsible for checking it, correcting it where needed, and deciding
+        whether it suits the purpose you use it for.
       </p>
 
       <h2>9. Availability and Changes</h2>
