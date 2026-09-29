@@ -21,7 +21,7 @@ export function DriveSmoothPrivacyPage() {
   return (
     <LegalPage
       title="DriveSmooth Privacy Policy"
-      lastUpdated="September 12, 2026"
+      lastUpdated="September 28, 2026"
       intro="DriveSmooth is a driving companion app that scores your trips using your phone's motion sensors and GPS, and helps you build smoother, safer driving habits. This policy covers the DriveSmooth apps for Android and iOS and the accounts behind them. Because the app works with location and account data, we want to be clear about exactly what is collected, why, and what control you have over it."
     >
       <h2>1. Information We Collect</h2>
@@ -87,10 +87,9 @@ export function DriveSmoothPrivacyPage() {
           to understand how the app is used and to find problems. Once you are
           signed in we label this data with your account identifier, so it is
           linked to your account rather than anonymous. On Android it also
-          includes your advertising ID; on iOS the advertising identifier is
-          included only if you allow it at the App Tracking Transparency prompt
-          described in section 5. Analytics is collected from released versions
-          of the apps only.
+          includes your advertising ID. On iOS it never includes the advertising
+          identifier, and it is not used to personalise ads. Analytics is
+          collected from released versions of the apps only.
         </li>
       </ul>
       <p>
@@ -182,12 +181,13 @@ export function DriveSmoothPrivacyPage() {
         their devices at all.
       </p>
       <p>
-        AdMob may use your device's advertising identifier as described in
-        Google's own privacy policy. On iOS, the app asks for your permission
-        first through Apple's App Tracking Transparency prompt; if you decline,
-        ads are still shown but are not personalised using that identifier. Your
-        trips, routes, driving events and scores are never used for advertising
-        and are never shared with an advertising network.
+        On iOS, DriveSmooth does not track you: it requests non-personalised
+        ads only, does not ask for access to your device's advertising
+        identifier, and does not show Apple's App Tracking Transparency prompt.
+        On Android, AdMob may use your device's advertising ID as described in
+        Google's own privacy policy. Your trips, routes, driving events and
+        scores are never used for advertising and are never shared with an
+        advertising network.
       </p>
 
       <h2>6. Third-Party Services</h2>
@@ -278,7 +278,10 @@ export function DriveSmoothPrivacyPage() {
         DriveSmooth in the meantime. Once it goes through, your account and
         everything attached to it — trips, stats, badges, challenge progress,
         any posts or comments made when community features were available, and
-        your profile — are permanently removed. If you cannot reach the app,
+        your profile — are permanently removed. If you signed in with Apple, the
+        app asks you to confirm with Apple once more when you request deletion,
+        and we revoke DriveSmooth's access to your Apple ID at that point. If
+        you cannot reach the app,
         email us at <strong>{site.email}</strong> from the address on your
         account and we will action the request.
       </p>
