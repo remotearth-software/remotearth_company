@@ -21,7 +21,7 @@ export function DriveSmoothPrivacyPage() {
   return (
     <LegalPage
       title="DriveSmooth Privacy Policy"
-      lastUpdated="September 28, 2026"
+      lastUpdated="October 9, 2026"
       intro="DriveSmooth is a driving companion app that scores your trips using your phone's motion sensors and GPS, and helps you build smoother, safer driving habits. This policy covers the DriveSmooth apps for Android and iOS and the accounts behind them. Because the app works with location and account data, we want to be clear about exactly what is collected, why, and what control you have over it."
     >
       <h2>1. Information We Collect</h2>
@@ -166,6 +166,10 @@ export function DriveSmoothPrivacyPage() {
         </li>
         <li>Comparing your driving with community averages</li>
         <li>Sending notifications you have opted into</li>
+        <li>
+          Contacting you if you win a challenge prize or earn a referral reward,
+          and emailing it to the address on your account
+        </li>
         <li>
           Operating and supporting the service — keeping accounts secure,
           detecting abuse and falsified trips, and fixing faults

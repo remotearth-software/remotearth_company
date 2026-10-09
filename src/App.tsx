@@ -5,6 +5,7 @@ import { HomePage } from '@/pages/HomePage'
 import { PrivacyPage } from '@/pages/PrivacyPage'
 import { DriveSmoothPrivacyPage } from '@/pages/DriveSmoothPrivacyPage'
 import { DriveSmoothTermsPage } from '@/pages/DriveSmoothTermsPage'
+import { DriveSmoothChallengeRulesPage } from '@/pages/DriveSmoothChallengeRulesPage'
 import { TermsPage } from '@/pages/TermsPage'
 import { NotFoundPage } from '@/pages/NotFoundPage'
 
@@ -23,6 +24,10 @@ function App() {
             <Route
               path="drivesmooth/terms"
               element={<DriveSmoothTermsPage />}
+            />
+            <Route
+              path="drivesmooth/challenge-rules"
+              element={<DriveSmoothChallengeRulesPage />}
             />
             <Route path="terms" element={<TermsPage />} />
             <Route path="*" element={<NotFoundPage />} />

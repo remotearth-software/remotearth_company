@@ -20,7 +20,7 @@ export function DriveSmoothTermsPage() {
   return (
     <LegalPage
       title="DriveSmooth Terms & Conditions"
-      lastUpdated="September 14, 2026"
+      lastUpdated="October 9, 2026"
       intro={`These terms are an agreement between you and ${site.name} covering your use of the DriveSmooth mobile app on Android and iOS. By creating an account or using the app, you agree to them. If you do not agree, please do not use DriveSmooth.`}
     >
       <h2>1. Safety Comes First</h2>
@@ -104,11 +104,14 @@ export function DriveSmoothTermsPage() {
         countries.
       </p>
       <p>
-        Challenges are for motivation, not prizes: unless we state otherwise in
-        the challenge itself, completing one earns recognition inside the app and
-        nothing more. We may add, change, shorten or withdraw a challenge, and we
-        may correct or reset leaderboard standings and challenge progress where
-        they were reached through falsified trips or a fault on our side.
+        Unless a challenge states a prize in its description, completing it earns
+        recognition inside the app and nothing more. Challenges — including the
+        ones that offer a prize — are governed by the DriveSmooth Challenge Rules,
+        published at remotearth.ca/drivesmooth/challenge-rules and linked from
+        the Challenges tab in the app. We may add, change, shorten or withdraw a
+        challenge, and we may correct or reset leaderboard standings and challenge
+        progress where they were reached through falsified trips or a fault on our
+        side.
       </p>
 
       <h2>6. Community Content</h2>
