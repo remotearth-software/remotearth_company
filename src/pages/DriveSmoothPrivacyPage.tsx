@@ -21,7 +21,7 @@ export function DriveSmoothPrivacyPage() {
   return (
     <LegalPage
       title="DriveSmooth Privacy Policy"
-      lastUpdated="October 9, 2026"
+      lastUpdated="October 12, 2026"
       intro="DriveSmooth is a driving companion app that scores your trips using your phone's motion sensors and GPS, and helps you build smoother, safer driving habits. This policy covers the DriveSmooth apps for Android and iOS and the accounts behind them. Because the app works with location and account data, we want to be clear about exactly what is collected, why, and what control you have over it."
     >
       <h2>1. Information We Collect</h2>
@@ -164,7 +164,6 @@ export function DriveSmoothPrivacyPage() {
           Leaderboards, badges, streaks and challenges (your display name,
           profile photo and scores appear to other users on leaderboards)
         </li>
-        <li>Comparing your driving with community averages</li>
         <li>Sending notifications you have opted into</li>
         <li>
           Contacting you if you win a challenge prize or earn a referral reward,
@@ -241,25 +240,38 @@ export function DriveSmoothPrivacyPage() {
           <strong>Zoho Mail</strong> — delivering account emails such as
           sign-up verification
         </li>
+        <li>
+          <strong>Google Drive</strong> (Google) — storing the encrypted
+          database backups described in section 8. Every backup is encrypted
+          before it is uploaded, with a key Google does not have
+        </li>
       </ul>
 
       <h2>7. Data Security</h2>
       <p>
         All data is transmitted over encrypted connections (HTTPS). Trips
         recorded offline are stored on your device and synced securely when you
-        are back online.
+        are back online. Database backups are encrypted before they are stored.
       </p>
 
       <h2>8. Data Retention and Deletion</h2>
       <p>
         Your account, profile, lifetime stats and badges are kept for as long as
-        your account exists. Two things are removed automatically on a rolling
+        your account exists. Three things are removed automatically on a rolling
         basis:
       </p>
       <ul>
         <li>
+          <strong>Detailed trip recordings are kept for 30 days.</strong> The
+          downsampled telemetry behind each trip — the roughly once-a-second
+          position, speed and motion readings we use to score it — is
+          permanently deleted from our servers 30 days after the trip is
+          uploaded. The trip itself, with its route, events and score, stays in
+          your history as described next.
+        </li>
+        <li>
           <strong>Trips are kept for one year.</strong> Recorded trips — their
-          routes, events and telemetry — are permanently deleted once they are
+          routes, events and scores — are permanently deleted once they are
           older than that, which is why your Trips screen covers the last year.
           (The window we actually apply is 370 days, so a full twelve months
           stays available to you for a few days beyond the anniversary.) Your
@@ -282,12 +294,26 @@ export function DriveSmoothPrivacyPage() {
         DriveSmooth in the meantime. Once it goes through, your account and
         everything attached to it — trips, stats, badges, challenge progress,
         any posts or comments made when community features were available, and
-        your profile — are permanently removed. If you signed in with Apple, the
+        your profile — are permanently removed from our systems, apart from the
+        encrypted backups described below, which expire on their own. If you
+        signed in with Apple, the
         app asks you to confirm with Apple once more when you request deletion,
         and we revoke DriveSmooth's access to your Apple ID at that point. If
         you cannot reach the app,
         email us at <strong>{site.email}</strong> from the address on your
         account and we will action the request.
+      </p>
+      <p>
+        <strong>Backups.</strong> So that DriveSmooth can be recovered after a
+        failure, we take an encrypted backup of our database every day. Each
+        backup is encrypted before it leaves our server, with a key the storage
+        provider does not have, and each one is deleted automatically: most
+        within two months, and one from each month within about 13 months.
+        Anything removed as described above — by the automatic clean-up, by you
+        deleting a trip, or by deleting your account — is gone from our live
+        systems at that point, but a copy can remain inside an encrypted backup
+        until that backup is deleted. Backups are used only to restore the
+        service.
       </p>
 
       <h2>9. Children's Privacy</h2>
